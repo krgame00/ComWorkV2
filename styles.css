@@ -1,0 +1,385 @@
+/* ตั้งค่าทั่วไป */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ตั้งค่าเริ่มต้น */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 🔥 Navbar */
+.navbar {
+    background: #222;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🔥 Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: red;
+}
+
+/* 🔥 Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: red;
+    border-radius: 5px;
+}
+
+/* 🔥 ปุ่มเมนูมือถือ */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 📌 Responsive - Mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+.search-box input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 🔥 สไลด์โชว์ */
+.slider {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* 🔥 แบนเนอร์โปรโมชั่น */
+.promotions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.promo-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    text-align: center;
+}
+
+.promo-item img {
+    width: 100%;
+}
+
+.promo-text {
+    padding: 10px;
+}
+
+.promo-text h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.promo-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 🔥 ตั้งค่าพื้นฐาน */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 🔥 ส่วนบทความ */
+.articles {
+    padding: 30px 20px;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🔥 หัวข้อบทความ */
+/* Container adjustment for positioning */
+.articles-header {
+    display: flex;
+    justify-content: flex-end; /* Align the header items to the right */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.articles-header h2 {
+    margin: 0;
+}
+
+.view-all {
+    font-size: 14px;
+    color: #007bff; /* You can adjust the color to suit your design */
+    text-decoration: none;
+}
+
+/* Adjust the articles-wrapper for horizontal layout */
+.articles-slider {
+    overflow-x: auto;  /* Allow horizontal scrolling */
+    padding-bottom: 10px; /* Add space below the slider for smooth scrolling */
+}
+
+.articles-wrapper {
+    display: flex;  /* Align the articles in a row */
+    gap: 20px;  /* Adjust spacing between articles */
+}
+
+.article-card {
+    flex: 0 0 auto; /* Prevent articles from shrinking, keep their width as defined */
+    width: 300px; /* Set a fixed width for each article card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+.article-content {
+    padding: 15px;
+}
+
+.read-more {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Styling for header */
+.articles-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.articles-header h2 {
+    margin: 0;
+}
+
+.view-all {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Articles container with horizontal scrolling */
+.articles-slider {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.articles-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+/* Style for individual article card */
+.article-card {
+    flex: 0 0 auto;
+    width: 300px; /* Fixed width for each article card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Title at the top */
+.article-content {
+    padding: 15px;
+}
+
+.article-title {
+    margin: 0;
+    font-size: 16px; /* Adjust title size as needed */
+    font-weight: bold;
+}
+
+.read-more {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* 🔥 ตั้งค่าพื้นฐาน */
+.article-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    min-width: 350px; /* กำหนดให้บทความไม่เล็กเกินไป */
+    flex: 0 0 auto;
+    display: inline-block;
+    text-align: center; /* จัดกึ่งกลางข้อความ */
+}
+
+/* 🔥 หัวข้อบทความ */
+.article-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* 🔥 รูปภาพบทความ */
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* 🔥 เนื้อหาบทความ */
+.article-content {
+    padding: 15px;
+    text-align: left; /* ให้ข้อความภายในอยู่ซ้าย */
+}
+
+/* 🔥 ปุ่มอ่านต่อ */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .articles-grid {
+        flex-direction: column;
+    }
+
+    .article-card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+}
