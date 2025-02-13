@@ -1,4 +1,6 @@
-/* ตั้งค่าหน้าหลัก */
+/* ========================= */
+/* 🌟 ตั้งค่าหน้าหลัก 🌟 */
+/* ========================= */
 body {
     font-family: 'Arial', sans-serif;
     background: #f9f9f9;
@@ -7,12 +9,16 @@ body {
     padding: 0;
 }
 
+/* ========================= */
+/* 🔥 Navbar 🔥 */
+/* ========================= */
 .navbar {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -29,16 +35,38 @@ body {
     font-weight: bold;
     color: #000;
     text-decoration: none;
+    margin-left: 0; /* ปรับให้ชิดด้านซ้าย */
 }
+
+
 
 .navbar .logo span {
     color: rgb(3, 201, 168);
 }
 
 .nav-links {
+    display: flex; /* เริ่มต้นให้แสดงผลแบบ flex สำหรับ desktop */
+    flex-direction: row;
     list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    list-style: none;
+}
+
+
+.nav-links.show {
     display: flex;
 }
+
+.menu-toggle {
+    display: block;
+    z-index: 1100; /* ให้ปุ่ม toggle อยู่ด้านบน */
+}
+
 
 .nav-links li {
     margin: 0 15px;
@@ -48,48 +76,63 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
+.nav-links a:hover {
+    color: rgb(3, 201, 168);
+}
+
+/* 📱 Responsive Menu (มือถือ) */
 .menu-toggle {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
 }
 
-/* Responsive: ซ่อนเมนูสำหรับมือถือ */
+
+
 @media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between; /* โลโก้ซ้าย เมนูขวา */
+        align-items: center;
+    }
+
     .nav-links {
-        display: none;
         flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 50%;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
+        width: 100%; /* เต็มจอ */
     }
 
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
     }
 }
 
-/* คอนเทนเนอร์ */
+
+/* ========================= */
+/* 📰 Container Layout 📰 */
+/* ========================= */
 .container {
     max-width: 1000px;
     margin: 50px auto;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* ส่วนรายละเอียดบทความ */
+/* ========================= */
+/* 📖 บทความหลัก (Blog Detail) */
+/* ========================= */
 .blog-detail {
-    width: 65%;
+    flex: 1;
+    min-width: 60%;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -123,9 +166,12 @@ body {
     padding-left: 20px;
 }
 
-/* 🔥 บทความแนะนำ */
+/* ========================= */
+/* 🔥 บทความแนะนำ (Related Articles) */
+/* ========================= */
 .related-articles {
-    width: 30%;
+    flex: 1;
+    min-width: 30%;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -171,6 +217,11 @@ body {
 .article-info h3 a {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.article-info h3 a:hover {
+    color: rgb(3, 201, 168);
 }
 
 .article-info .date {
@@ -184,6 +235,9 @@ body {
     margin: 5px 0 0;
 }
 
+/* ========================= */
+/* 🎨 Footer 🎨 */
+/* ========================= */
 footer {
     background: #222;
     color: white;
@@ -192,4 +246,93 @@ footer {
     margin-top: 40px;
 }
 
+/* ========================= */
+/* ✅ Responsive Design ✅ */
+/* ========================= */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 
+    .blog-detail {
+        width: 100%;
+    }
+
+    .related-articles {
+        width: 100%;
+    }
+
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .article-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* ซ่อนเมนูในมือถือ */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex; /* แสดงเมนูเมื่อมี class "show" */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* แสดงปุ่ม toggle ในมือถือ */
+    }
+}
+
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex; /* กลับมาแสดงผลเมนูสำหรับ desktop */
+    }
+}

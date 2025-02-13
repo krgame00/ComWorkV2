@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 External Harddisk ยี่ห้อไหนดี 2025</title>
+    <title>SSDNB</title>
     <link rel="stylesheet" href="blog.css">
+    <script defer src="script.js"></script> <!-- เพิ่ม JavaScript -->
 </head>
 <body>
 
@@ -12,9 +13,9 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <a href="index2.html" class="logo">COMPUTER<span>HW</span></a>
+                <a href="index.html" class="logo">COMPUTER<span>HW</span></a>
                 <ul class="nav-links">
-                    <li><a href="index2.html">หน้าแรก</a></li>
+                    <li><a href="index.html">หน้าแรก</a></li>
                     <li><a href="computerhw.html">บทความ</a></li>
                     <li><a href="about.html">ติดต่อเรา</a></li>
                 </ul>
@@ -86,7 +87,7 @@
             <h2>บทความแนะนำ</h2>
             <div class="article-list">
                 <div class="article-item">
-                    <img src="related1.jpg" alt="SSD Notebook">
+                    <img src="images/SsdNotebook.jpg" alt="SSD Notebook">
                     <div class="article-info">
                         <span class="date">01 ก.พ. 2568</span>
                         <h3><a href="ssd-notebook.html">SSD Notebook ยี่ห้อไหนดีที่ควรซื้อ</a></h3>
@@ -95,7 +96,7 @@
                 </div>
 
                 <div class="article-item">
-                    <img src="related2.jpg" alt="SSD 1TB">
+                    <img src="images/SSD.jpg" alt="SSD 1TB">
                     <div class="article-info">
                         <span class="date">01 ก.พ. 2568</span>
                         <h3><a href="ssd-1tb.html">5 รุ่น SSD 1TB รุ่นไหนดี คุ้มค่าที่สุด 2025</a></h3>
@@ -105,7 +106,15 @@
             </div>
         </aside>
     </div>
-
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+    
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show'); // เพิ่ม/ลบ class "show" เมื่อคลิก
+        });
+    </script>
+    
     <!-- Footer -->
     <footer>
         <p>&copy; IT KKTECH | เว็บไซต์แนะนำอุปกรณ์คอมพิวเตอร์</p>

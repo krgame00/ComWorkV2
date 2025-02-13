@@ -84,15 +84,58 @@ body {
     }
 }
 
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+/* ========================= */
+/* Responsive Design for Mobile */
+/* ========================= */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .article-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 /* ----- Banner (แบนเนอร์โปรโมชั่น) ----- */
 .slider {
     width: 100%;
     overflow: hidden;
+    
 }
 
 .slide img {
     width: 100%;
     display: block;
+    height: 300px;
 }
 
 /* ----- Promotions (โปรโมชั่น) ----- */
@@ -188,7 +231,7 @@ body {
 
 .article-card img {
     width: 100%;
-    height: auto;
+    height: 150px;
 }
 
 .article-info {

@@ -104,7 +104,7 @@
 }
 
 .highlight-article img {
-    width: 200px;
+    width: 100px;
     height: auto;
     border-radius: 10px;
     margin-right: 20px;
@@ -201,4 +201,141 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+/* ========================= */
+/* Responsive Design for Mobile */
+/* ========================= */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .article-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* บทความเด่น */
+.highlight-article {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.highlight-article img {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+/* การ์ดบทความ */
+.article-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.article-card {
+    background: white;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.article-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ========================= */
+/* Default (Desktop) - แสดงเป็น 3 คอลัมน์ */
+/* ========================= */
+.article-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.article-card {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    width: 30%; /* เดสก์ท็อปแสดง 3 คอลัมน์ */
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.article-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+/* Responsive: แสดงเป็น 1 คอลัมน์บนจอเล็ก */
+@media screen and (max-width: 768px) {
+    .article-row {
+        flex-direction: column; /* เรียงแนวตั้ง */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .article-card {
+        width: 95%; /* ให้เต็มจอมากขึ้น */
+        max-width: none;
+    }
 }
