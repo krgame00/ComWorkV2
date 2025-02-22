@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IHAVECPU - คอมพิวเตอร์และฮาร์ดแวร์</title>
+    <title>ComputerHW</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="test.js"></script> <!-- เพิ่ม JavaScript -->
 </head>
 <body>
 
@@ -12,112 +13,79 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">COMPUTER<span>HW</span></a>
+                <a href="/index.html" class="logo">COMPUTER<span>HW</span></a>
                 <ul class="nav-links">
-                    <li><a href="index.html">หน้าแรก</a></li>
-                    <li><a href="computerhw.html">บทความ</a></li>
-                    <li><a href="#">ติดต่อเรา</a></li>
+                    <li><a href="/index.html">หน้าแรก</a></li>
+                    <li><a href="/computerhw.html">บทความ</a></li>
+                    <li><a href="/terms/about.html">ติดต่อเรา</a></li>
                 </ul>
                 <div class="menu-toggle">&#9776;</div> <!-- เมนูมือถือ -->
             </div>
         </nav>
     </header>
 
-    <!-- 🔥 สไลด์โชว์ -->
-    <section class="slider">
-        <div class="slide">
-            <img src="images/468138542_612361798015648_8987691288455231728_n.jpg" alt="GeForce RTX Promotion">
+    <!-- บทความเด่น -->
+    <section class="highlight-article">
+        <a href="/blog/1.html">
+            <img src="images/SsdNotebook.jpg" alt="SSD Notebook">
+            <div class="article-info">
+                <span class="tag">ใหม่ล่าสุด</span>
+                <h2>SSD Notebook ยี่ห้อไหนดีที่ อัปเกรดคอมให้เร็วแรง</h2>
+                <p>01 ก.พ. 2568</p>
+            </div>
+        </a>
+    </section>
+
+    <!-- รายการบทความ -->
+    <section class="article-grid">
+        <div class="article-row">
+            <a href="/blog/2.html" class="article-card">
+                <img src="images/External Harddisk.jpg" alt="External Hard Disk">
+                <h3> External Hard Disk</h3>
+            </a>
+            <a href="/blog/3.html" class="article-card">
+                <img src="images/SSD.jpg" alt="SSD 1TB">
+                <h3>SSD 1TB ตัวเด็ด ถึกทน น่าซื้อใช้งาน 2025</h3>
+            </a>
+            <a href="/blog/4.html" class="article-card">
+                <img src="images/UPS.jpg" alt="UPS">
+                <h3>เครื่องสำรองไฟ UPS กันไฟตก ไฟดับ</h3>
+            </a>
+        </div>
+
+        <div class="article-row">
+            <a href="/blog/5.html" class="article-card">
+                <img src="images/USBHUB.jpg" alt="USB Hub">
+                <h3>แนะนำ USB Hub  โอนข้อมูลรวดเร็ว</h3>
+            </a>
+            <a href="/blog/6.html" class="article-card">
+                <img src="images/RWIFI.jpg" alt="Router">
+                <h3>เราเตอร์ใส่ซิม ตัวกระจายสัญญาณ Wi-Fi</h3>
+            </a>
+            <a href="/blog/7.html" class="article-card">
+                <img src="images/LAN.jpg" alt="Headphone">
+                <h3>สายแลน มีกี่แบบ ใช้ยังไง ควรใช้สาย LAN รุ่นไหนดี</h3>
+            </a>
         </div>
     </section>
 
-    <!-- 🔥 แบนเนอร์โปรโมชั่น -->
-    <section class="promotions">
-        <div class="promo-item">
-            <img src="images/467049482_1116440233382728_670272159593326075_n.jpg" alt="ส่งฟรี">
-            <div class="promo-text">
-                <h3>สินค้าเยอะแยะ! ส่งด่วนได้แล้ววันนี้</h3>
-                <p>สินค้าส่งฟรีเมื่อซื้อครบ 5,000 บาท</p>
-            </div>
-        </div>
-        <div class="promo-item">
-            <img src="images/467049482_1116440233382728_670272159593326075_n.jpg" alt="ผ่อน 0%">
-            <div class="promo-text">
-                <h3>ผ่อน 0% นานสูงสุด 10 เดือน</h3>
-                <p>ผ่อนบนเว็บไซต์ได้แล้ววันนี้</p>
-            </div>
-        </div>
-        <div class="promo-item">
-            <img src="images/467049482_1116440233382728_670272159593326075_n.jpg" alt="Onsite Service">
-            <div class="promo-text">
-                <h3>Onsite Service ซ่อมถึงบ้าน</h3>
-                <p>บริการถึงที่ แก้ปัญหาเร็ว</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="articles">
-        <div class="container">
-            <div class="articles-header">
-                <h2>บทความ</h2>
-                <a href="articles.html" class="view-all">ดูทั้งหมด</a>
-            </div>
-            <div class="articles-slider">
-                <div class="articles-wrapper">
-                    <div class="article-card">
-                        <img src="images/article1.jpg" alt="SSD Notebook">
-                        <div class="article-meta">
-                            <span class="article-date">01 ก.พ. 2568</span>
-                        </div>
-                        <h3 class="article-title">SSD Notebook ยี่ห้อไหนดีที่ควรซื้อ อัปเกรดคอมให้เร็วแรง</h3>
-                        <div class="article-content">
-                            <p>การอัปเกรด SSD ไม่ได้มีแค่ด้านความเร็ว แต่มันช่วยเปลี่ยนประสบการณ์ใช้งานให้ลื่นไหลขึ้น...</p>
-                            <a href="#" class="read-more">อ่านต่อทั้งหมด</a>
-                        </div>
-                    </div>
-                    <div class="article-card">
-                        <img src="images/article2.jpg" alt="External Harddisk">
-                        <div class="article-meta">
-                            <span class="article-date">01 ก.พ. 2568</span>
-                        </div>
-                        <h3 class="article-title">อัปเดต 10 External Harddisk ยี่ห้อไหนดี ยอดนิยมแห่งปี 2025</h3>
-                        <div class="article-content">
-                            <p>External Hard Disk ที่ดีที่สุดสำหรับการเก็บข้อมูลอย่างมีประสิทธิภาพ...</p>
-                            <a href="#" class="read-more">อ่านต่อทั้งหมด</a>
-                        </div>
-                    </div>
-                    <div class="article-card">
-                        <img src="images/article3.jpg" alt="SSD 1TB">
-                        <div class="article-meta">
-                            <span class="article-date">01 ก.พ. 2568</span>
-                        </div>
-                        <h3 class="article-title">5 รุ่น SSD 1TB รุ่นไหนดี ตัวเด็ด ลึกคม น่าซื้อใช้งาน ปี 2025</h3>
-                        <div class="article-content">
-                            <p>SSD ขนาด 1TB รุ่นไหนดีสำหรับคนที่ต้องการพื้นที่จัดเก็บมากขึ้น...</p>
-                            <a href="#" class="read-more">อ่านต่อทั้งหมด</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Pagination -->
+    <section class="article-container" id="article-container">
+        <!-- บทความจะถูกโหลดที่นี่โดย JavaScript -->
     </section>
     
+    <!-- Pagination -->
+    <div class="pagination">
+        <button id="prevPage">❮</button>
+        <div id="pageNumbers"></div>
+        <button id="nextPage">❯</button>
+    </div>
     
     
-    
-    
-            
-            
-        <script>
-            document.querySelector(".menu-toggle").addEventListener("click", function() {
-                document.querySelector(".nav-links").classList.toggle("show");
-            });
-        </script>
-        
-
 
     <!-- Footer -->
     <footer>
-        <p>&copy; IT KKTECH| เว็บไซต์แนะนำอุปกรณ์คอมพิวเตอร์|</p>
+        <p>&copy; IT KKTECH | เว็บไซต์แนะนำอุปกรณ์คอมพิวเตอร์</p>
     </footer>
 
 </body>

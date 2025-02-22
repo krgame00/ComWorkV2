@@ -1,0 +1,338 @@
+/* ========================= */
+/* 🌟 ตั้งค่าหน้าหลัก 🌟 */
+/* ========================= */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= */
+/* 🔥 Navbar 🔥 */
+/* ========================= */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    margin-left: 0; /* ปรับให้ชิดด้านซ้าย */
+}
+
+
+
+.navbar .logo span {
+    color: rgb(3, 201, 168);
+}
+
+.nav-links {
+    display: flex; /* เริ่มต้นให้แสดงผลแบบ flex สำหรับ desktop */
+    flex-direction: row;
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    list-style: none;
+}
+
+
+.nav-links.show {
+    display: flex;
+}
+
+.menu-toggle {
+    display: block;
+    z-index: 1100; /* ให้ปุ่ม toggle อยู่ด้านบน */
+}
+
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: rgb(3, 201, 168);
+}
+
+/* 📱 Responsive Menu (มือถือ) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between; /* โลโก้ซ้าย เมนูขวา */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%; /* เต็มจอ */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+
+/* ========================= */
+/* 📰 Container Layout 📰 */
+/* ========================= */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ========================= */
+/* 📖 บทความหลัก (Blog Detail) */
+/* ========================= */
+.blog-detail {
+    flex: 1;
+    min-width: 60%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-detail h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.blog-detail .date {
+    font-size: 14px;
+    color: gray;
+}
+
+.blog-detail img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.blog-detail h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.blog-detail ul,
+.blog-detail ol {
+    padding-left: 20px;
+}
+
+/* ========================= */
+/* 🔥 บทความแนะนำ (Related Articles) */
+/* ========================= */
+.related-articles {
+    flex: 1;
+    min-width: 30%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.related-articles h2 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.article-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.article-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.article-info {
+    flex: 1;
+}
+
+.article-info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.article-info h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.article-info h3 a:hover {
+    color: rgb(3, 201, 168);
+}
+
+.article-info .date {
+    font-size: 12px;
+    color: gray;
+}
+
+.article-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* ========================= */
+/* 🎨 Footer 🎨 */
+/* ========================= */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ========================= */
+/* ✅ Responsive Design ✅ */
+/* ========================= */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .blog-detail {
+        width: 100%;
+    }
+
+    .related-articles {
+        width: 100%;
+    }
+
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .article-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* ซ่อนเมนูในมือถือ */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex; /* แสดงเมนูเมื่อมี class "show" */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* แสดงปุ่ม toggle ในมือถือ */
+    }
+}
+
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex; /* กลับมาแสดงผลเมนูสำหรับ desktop */
+    }
+}

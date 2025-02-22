@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ติดต่อเรา - COMHW</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+      }
+      .navbar .logo span {
+        color: rgb(3, 201, 168);
+      }
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        margin: 0 15px;
+      }
+      .nav-links a:hover {
+        color: rgb(3, 201, 168);
+      }
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+      }
+      .container {
+        display: flex;
+      }
+      .sidebar {
+        width: 250px;
+        background: #f8f8f8;
+        padding: 20px;
+        height: 100vh;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        transition: background 0.3s ease;
+      }
+      .sidebar ul li:hover {
+        background: none;
+      }
+      .sidebar ul li:hover a {
+        color: rgb(3, 201, 168);
+        font-weight: bold;
+      }
+      .sidebar ul li img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      .sidebar ul li a {
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease;
+      }
+      .content {
+        flex: 1;
+        padding: 20px;
+        background: #f1f8f4;
+      }
+      h2 {
+        color: #333;
+      }
+      .contact-info {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      .contact-info p {
+        margin: 5px 0;
+      }
+      .socials a {
+        color: red;
+        text-decoration: none;
+      }
+      @media screen and (max-width: 768px) {
+        .navbar .container {
+          flex-direction: row;
+        }
+        .navbar .logo {
+          order: 1;
+        }
+        .menu-toggle {
+          display: block;
+          order: 2;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background: white;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+        }
+        .nav-links.show {
+          display: flex;
+        }
+        .container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: #ffffff;
+          padding: 10px 0;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links li {
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .article-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("show");
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="/index.html" class="logo">COMPUTER<span>HW</span></a>
+          <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+          <ul class="nav-links">
+            <li><a href="/index.html">หน้าแรก</a></li>
+            <li><a href="/computerhw.html">บทความ</a></li>
+            <li><a href="/terms/about.html">ติดต่อเรา</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <img
+              src="/images/about.png"
+              alt="เกี่ยวกับเรา"
+            /><a href="/terms/about.html">เกี่ยวกับเรา</a>
+          </li>
+          <li>
+            <img
+              src="/images/contactus.png"
+              alt="ติดต่อเรา"
+            /><a href="/terms/contactus.html">ติดต่อเรา</a>
+          </li>
+          <li>
+            <img
+              src="/images/terms.png"
+              alt="ข้อกำหนดและเงื่อนไข"
+            /><a href="/terms/terms.html">ข้อกำหนดและเงื่อนไข</a>
+          </li>
+          <li>
+            <img
+              src="/images/privacy.png"
+              alt="นโยบายความเป็นส่วนตัว"
+            /><a href="/terms/privacy.html">นโยบายความเป็นส่วนตัว</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h2>ติดต่อเรา</h2>
+        <div class="contact-info">
+          <h3>ช่องทางติดต่อ</h3>
+          <p><strong>วิทยาลัยเทคนิคขอนแก่น</strong></p>
+          <ul>
+            <li>ที่อยู่: 67 ถ. ศรีจันทร์ ตำบลในเมือง อำเภอเมืองขอนแก่น ขอนแก่น 40000</li>
+            <li>โทรศัพท์: 094 935 7457</li>
+            <li>อีเมล: s65209010019@kktech.ac.th</li>
+            <li>อีเมล: s65209010018@kktech.ac.th</li>
+            <li>อีเมล: s65209010002@kktech.ac.th</li>
+          </ul>
+          <h3>ช่องทางโซเชียล</h3>
+          <p class="socials">Facebook: <a href="https://www.facebook.com/krg002/">Supachai Klomkhan Kr</a></p>
+                    <p class="socials">Instagram: <a href="https://www.instagram.com/krgame02/">krgame02</a></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; IT KKTECH | เว็บไซต์แนะนำอุปกรณ์คอมพิวเตอร์</p>
+    </footer>
+  </body>
+</html>
